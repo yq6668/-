@@ -1,0 +1,128 @@
+<!-- pages/nearby/nearby.wxml -->
+<scroll-view class="scroll" scroll-y="true">
+    <view class="map">
+        <map id="map" bindregionchange="bindregionchange" bindmarkertap="bindmarkertap" show-location="true" longitude="{{longitude}}" latitude="{{latitude}}" show-scale markers="{{local.markers}}" scale="12">
+            <view class="cover">
+                <view class="item {{act1}}" bindtap="click1">
+                    <view class="iconfont icon-r"></view>
+                    确诊病例
+                </view>
+                <view class="item {{act2}}" bindtap="click2">
+                    <view class="iconfont icon-yy"></view>
+                    医院
+                </view>
+            </view>
+            <view class="cover2" bindtap="clickcontrol">
+                <view class="iconfont icon-dw"></view>
+            </view>
+        </map>
+        <van-popup show="{{ show }}" class="popup" bind:close="onClose" position="bottom" custom-style="height: 65%;" closeable round overlay="{{false}}">
+            <view wx:if="{{judge}}">
+                <view class="popup_header">
+                    <view class="left">
+                        <image src="{{detail.iconPath}}"></image>
+                    </view>
+                    <view class="right">
+                        <view>{{detail.shop_name}}</view>
+                        <view class="r1">距离你{{detail.distance}}</view>
+                    </view>
+                </view>
+                <view class="popup_body">
+                    <view>
+                        在
+                        <text style="color:cornflowerblue;">{{detail.created}}</text>
+                        被发现该确诊病例逗留地
+                    </view>
+                    <view>
+                        距离发现此病例逗留地已过去
+                        <text style="color:cornflowerblue;">{{detail.dura}}</text>
+                        天
+                    </view>
+                    <view>详细地址：{{detail.detail_address}}</view>
+                    <view class="b1">
+                        <view>信息来源：</view>
+                        <view>{{detail.source}}: {{detail.source_url}}</view>
+                    </view>
+                </view>
+            </view>
+            <view wx:if="{{!judge}}">
+                <view class="popup_header">
+                    <view class="left">
+                        <image src="https://temp.sspai.com/yikuang/img/icon_hospital.png"></image>
+                    </view>
+                    <view class="right">
+                        <view>{{detail.name}}</view>
+                        <view class="r1">距离你{{detail.distance}}</view>
+                    </view>
+                </view>
+                <view class="popup_body">
+                    <text class="m4" wx:if="{{detail.is_fever}}">发热门诊</text>
+                    <text class="m5" wx:if="{{detail.is_core}}">医疗救治定点医院</text>
+                    <view>详细地址：{{detail.address}}</view>
+                </view>
+            </view>
+        </van-popup>
+    </view>
+    <view class=" state">
+        <view class="state_left" wx:if="{{judge}}">
+            <view class="item">
+                <image src="https://temp.sspai.com/yikuang/img/red_mark.png" />
+                <text>14天确诊</text>
+            </view>
+            <view class="item">
+                <image src="https://temp.sspai.com/yikuang/img/yellow_mark.png" />
+                <text>14-28天确诊</text>
+            </view>
+            <view class="item">
+                <image src="https://temp.sspai.com/yikuang/img/green_mark.png" />
+                <text>确诊超过28天</text>
+            </view>
+        </view>
+        <view class="state_lefth" wx:if="{{!judge}}">
+            <view class="item">
+                <image src="https://temp.sspai.com/yikuang/img/icon_hospital.png" />
+                <text>医疗救治定点医院/发热门诊医疗机构</text>
+            </view>
+        </view>
+        <view class="state_right">数据来自当地卫健委或政府发布渠道：{{time}}</view>
+    </view>
+    <view class="nearby">
+        <view class="text" wx:if="{{judge}}">
+            发现{{nearby.data.shops.length}} 处确诊病例逗留地
+            <view class="iconfont icon-sx" bindtap="refresh"></view>
+        </view>
+        <view class="text" wx:if="{{!judge}}">
+            发现{{nearby.data.shops.length}} 处定点医院
+            <view class="iconfont icon-sx" bindtap="refresh"></view>
+        </view>
+        <view class="t1">
+            <view class="t2" wx:if="{{zz}}"></view>
+            <view class="t3" wx:if="{{zz}}">当前位置 附近</view>
+        </view>
+        <view class="detail">
+            <block wx:for="{{nearby.data.shops}}" wx:key="id">
+                <view class="item" bindtap="navigator" data-did="{{item.id}}">
+                    <view class="left">
+                        <image src="{{item.iconPath}}"></image>
+                    </view>
+                    <view class="middle" wx:if="{{judge}}">
+                        <view class="m1">{{item.shop_name}}</view>
+                        <view class="m2">{{item.address}}</view>
+                        <view class="m3">{{item.detail_address}}</view>
+                    </view>
+                    <view class="middle" wx:if="{{!judge}}">
+                        <view class="m1">{{item.name}}</view>
+                        <text class="m4" wx:if="{{item.is_fever}}">发热门诊</text>
+                        <text class="m5" wx:if="{{item.is_core}}">医疗救治定点医院</text>
+                        <view class="m3">{{item.address}}</view>
+                    </view>
+                    <view class="right">
+                        <view>{{item.distance}}</view>
+                        <view wx:if="{{index==0}}" class="hint">离我最近</view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <van-toast id="van-toast" />
+</scroll-view>

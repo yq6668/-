@@ -1,0 +1,203 @@
+.container .t0 {
+  width: 100%;
+  height: 300rpx;
+  background-image: url(http://www.jxgwy.org/uploadfile/2020/0715/20200715075802383.jpg);
+  background-size: 100% 100%;
+  opacity: 0.7;
+}
+.container .t1 {
+  font-size: 36rpx;
+  display: flex;
+  background-color: #fff;
+  color: #dfc3bc;
+  padding: 12rpx;
+  font-weight: bold;
+  padding-bottom: 40rpx;
+}
+.container .dashed {
+  margin-bottom: 40rpx;
+}
+.container .dashed .box0 {
+  display: flex;
+  margin-top: 20rpx;
+}
+.container .dashed .box0 .red0 {
+  position: absolute;
+  left: 10rpx;
+  line-height: 44rpx;
+  width: 44rpx;
+  height: 44rpx;
+  background-color: #ee4d4d;
+  opacity: 0.6;
+}
+.container .dashed .box0 .pubDate {
+  color: #a4acb6;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  margin-top: 4rpx;
+  margin-left: 40rpx;
+}
+.container .dashed .bbb {
+  border-left: 6rpx dotted #eecbcb;
+  padding-top: 20rpx;
+}
+.container .dashed .bbb .box1 {
+  background-color: #f4f4f4;
+  margin-left: 28rpx;
+  padding: 50rpx 50rpx;
+}
+.container .dashed .bbb .box1 .title {
+  font-size: 40rpx;
+  line-height: 46rpx;
+  color: #333;
+  font-weight: 700;
+  padding: 20rpx 0rpx;
+}
+.container .dashed .bbb .box1 .summary {
+  color: #999;
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+.container .dashed .infoSource {
+  color: #999;
+  font-size: 28rpx;
+  margin: 10rpx 20rpx;
+}
+.container .van-cell {
+  padding: 0rpx 28rpx;
+}
+.container .tb {
+  padding: 10rpx 6rpx;
+}
+.container .tt {
+  padding: 30rpx;
+}
+.container .tt .tipt {
+  text-align: left;
+  display: flex;
+  color: #333;
+  font-weight: lighter;
+  font-size: 36rpx;
+  padding: 20rpx;
+}
+.container .tt .tips {
+  border-radius: 20rpx;
+  background-color: #a0ddf5;
+  padding: 30rpx 40rpx;
+  margin-bottom: 40rpx;
+}
+.container .tt .tips .tip {
+  color: #666;
+  font-size: 30rpx;
+}
+.container .tt .tips .tip .blue {
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #d1e9ff;
+  border-radius: 50%;
+  position: relative;
+  top: 24rpx;
+  right: 20rpx;
+}
+.container .area {
+  font-size: 30rpx;
+  color: #666;
+  padding: 0rpx 20rpx;
+}
+.container .middle {
+  color: #333;
+  font-weight: lighter;
+  display: flex;
+  font-size: 36rpx;
+  padding: 0rpx 20rpx;
+}
+.container .high {
+  color: #333;
+  font-weight: lighter;
+  display: flex;
+  font-size: 36rpx;
+  padding: 0rpx 20rpx;
+}
+.container .midback {
+  background-color: rgba(250, 190, 79, 0.5);
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  margin: 20rpx 0rpx;
+}
+.container .midback .orange {
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #f5f5c8;
+  border-radius: 50%;
+  position: relative;
+  top: 24rpx;
+  right: 20rpx;
+}
+.container .highback {
+  background-color: rgba(250, 150, 150, 0.5);
+  border-radius: 20rpx;
+  padding: 30rpx 20rpx;
+  margin: 20rpx 0rpx;
+}
+.container .highback .red {
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #f8e6e6;
+  border-radius: 50%;
+  position: relative;
+  top: 24rpx;
+  right: 20rpx;
+}
+.container .left {
+  margin-left: 10rpx;
+}
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 2912544 */
+  src: url('//at.alicdn.com/t/font_2912544_iugm3actrxd.woff2?t=1636011512761') format('woff2'), url('//at.alicdn.com/t/font_2912544_iugm3actrxd.woff?t=1636011512761') format('woff'), url('//at.alicdn.com/t/font_2912544_iugm3actrxd.ttf?t=1636011512761') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-zhankai:before {
+  content: "\e6b1";
+}
+.icon-zhankai1:before {
+  content: "\e632";
+}
+.icon-zhankai2:before {
+  content: "\e62a";
+}
+.icon-zhankai3:before {
+  content: "\e633";
+}
+.icon-zhankai-:before {
+  content: "\e648";
+}
+.icon-gerenfangyi:before {
+  content: "\e639";
+}
+.icon-fangyizhishi:before {
+  content: "\e6e7";
+}
+.icon-fangyitaishi:before {
+  content: "\e718";
+}
+.icon-fengxiandiqu:before {
+  content: "\e649";
+}
+.icon-Abnormalarea:before {
+  content: "\ea51";
+}
+.icon-close:before {
+  content: "\e629";
+}
+.icon-shouye-zhankai-guanbi:before {
+  content: "\e618";
+  position: relative;
+  left: 24rpx;
+}

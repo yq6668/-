@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-popup": "../../components/vant/popup/index",
+    "van-toast": "../../components/vant/toast/index"
+   
+  },
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle":"dark"
+}

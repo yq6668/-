@@ -1,0 +1,396 @@
+text {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    .globl-top {
+        width: 100%;
+        flex-direction: row;
+        padding: 20rpx 40rpx;
+        box-sizing: border-box;
+        background-color:rgba(255, 255, 255, .1);
+
+        .view1 {
+            height: 90rpx;
+            line-height: 90rpx;
+
+            .i {
+                font-size: 60rpx;
+                color: royalblue;
+            }
+
+            .text {
+                height: 100%;
+                font-size: 60rpx;
+                padding-left: 20rpx;
+                padding-right: 14rpx;
+            }
+
+            image {
+                width: 100rpx;
+            }
+        }
+
+        .view2 {
+            padding-left: 40rpx;
+
+            text {
+                font-size: 40rpx;
+                color: silver;
+            }
+        }
+    }
+
+    .globl-condition {
+        padding: 10rpx 30rpx;
+        display: flex;
+        flex-direction: row;
+
+        >view {
+            flex-direction: column;
+            flex: 1;
+            padding: 20rpx 0;
+            height: 160rpx;
+            margin: 3rpx;
+            background-color: khaki;
+
+            >view {
+                text-align: center;
+            }
+
+            .view1 {
+                padding-top: 10rpx;
+                font-size: 30rpx;
+            }
+
+            .view2 {
+                padding-top: 20rpx;
+                font-size: 30rpx;
+                font-weight: 700;
+            }
+
+            .view3 {
+                padding-top: 20rpx;
+                color: #7c7c7c;
+                font-size: 20rpx;
+            }
+        }
+
+        .view-a {
+            background-color: #fff4f4;
+            border-top-left-radius: 20rpx;
+            border-bottom-left-radius: 20rpx;
+
+            .view2 {
+                color: #be2121;
+            }
+
+            .view3 {
+                .text4 {
+                    color: #be2121;
+                }
+            }
+        }
+
+        .view-b {
+            background-color: #fff8f8;
+
+            .view1 {
+                .text1 {
+                    display: inline-block;
+                    padding-right: 6rpx;
+                }
+
+                .text2 {
+                    color: #8d8c8c;
+                }
+            }
+
+            .view2 {
+                color: #e61c1d;
+            }
+
+            .view3 {
+                .text4 {
+                    color: #e61c1d;
+                }
+            }
+        }
+
+        .view-c {
+            background-color: #f1f8f4;
+
+            .view2 {
+                color: #178b50;
+            }
+
+            .view3 {
+                .text4 {
+                    color: #178b50;
+                }
+            }
+        }
+
+        .view-d {
+            background-color: #f3f6f8;
+            border-top-right-radius: 20rpx;
+            border-bottom-right-radius: 20rpx;
+
+            .view2 {
+                color: #4e5a65;
+            }
+
+            .view3 {
+                .text4 {
+                    color: #4e5a65;
+                }
+            }
+        }
+    }
+
+    .global-sort {
+        box-shadow: 0 0 20rpx rgb(0 0 0 / 20%);
+        border-radius: 20rpx;
+        background-color: #fff;
+        margin: 0 1%;
+        .nav {
+            top: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            padding: 20rpx 30rpx 0 30rpx;
+            box-sizing: border-box;
+      
+
+            >view {
+                height: 80rpx;
+                line-height: 80rpx;
+                text-align: center;
+                color: #333;
+                font-size: 28rpx;
+                background-color: #ebebeb;
+            }
+
+            .nav-1 {
+                flex: 12;
+                color: #222222;
+                background-color: #ebebeb;
+
+            }
+
+            .nav-2 {
+                flex: 12;
+                background-color: #fee7e7;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .xianyou{
+                    color: rgb(238, 110, 174);
+                }
+
+                .font {
+                    height: 100%;
+                    position: relative;
+                    width: 16rpx;
+                    color: rgb(158, 157, 157);
+                    font-size: 22rpx;
+
+                    .font1 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 28rpx;
+                        left: 0;
+                    }
+
+                    .font2 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 30rpx;
+                        left: 0;
+                    }
+                }
+            }
+
+            .nav-3 {
+                flex: 12;
+                background-color: #ffefe6;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .leiji{
+                    color: #f55253;
+                }
+
+                .font {
+                    height: 100%;
+                    position: relative;
+                    width: 16rpx;
+                    color: rgb(158, 157, 157);
+                    font-size: 22rpx;
+
+                    .font1 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 28rpx;
+                        left: 0;
+                    }
+
+                    .font2 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 30rpx;
+                        left: 0;
+                    }
+                }
+            }
+
+            .nav-4 {
+                flex: 9;
+                background-color: #ebebeb;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .font {
+                    height: 100%;
+                    position: relative;
+                    width: 16rpx;
+                    color: rgb(158, 157, 157);
+                    font-size: 22rpx;
+
+                    .font1 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 28rpx;
+                        left: 0;
+                    }
+
+                    .font2 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 30rpx;
+                        left: 0;
+                    }
+                }
+            }
+
+            .nav-5 {
+                flex: 13;
+                background-color:#cee8dd;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .zhiyu{
+                    color: #178B50;
+                }
+
+                .font {
+                    height: 100%;
+                    position: relative;
+                    width: 16rpx;
+                    color: rgb(158, 157, 157);
+                    font-size: 22rpx;
+
+                    .font1 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 28rpx;
+                        left: 0;
+                    }
+
+                    .font2 {
+                        position: absolute;
+                        padding-left: 4rpx;
+                        top: 30rpx;
+                        left: 0;
+                    }
+                }
+            }
+        }
+   
+
+        .sort {
+            display: flex;
+            flex-direction: row;
+            padding: 0 30rpx;
+
+            >view {
+                padding-top: 20rpx;
+                padding-bottom: 20rpx;
+                padding-right: 6rpx;
+                color: #333;
+                font-size: 26rpx;
+                font-weight: 700;
+                text-align: right;
+                border-bottom: 1px solid #d8d8dd;
+            }
+
+            .nav-a {
+                flex: 12;
+                text-align: center;
+                font-size: 30rpx;
+            }
+
+            .nav-b {
+                flex: 12;
+                color: #cf2b1e;
+            }
+
+            .nav-c {
+                flex: 12;
+            }
+
+            .nav-d {
+                flex: 9;
+            }
+
+            .nav-e {
+                flex: 13;
+            }
+        }
+    }
+}
+
+.show-top {
+    padding: 30rpx 0;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: 700;
+    color: #333;
+    i{
+        color: #e10000;
+    }
+}
+
+.show-body {
+    padding: 20rpx 40rpx;
+    font-size: 28rpx;
+    color: #666;
+
+    >view {
+        margin-bottom: 20rpx;
+    }
+}
+
+
+.show2 {
+    padding: 60rpx 40rpx 40rpx 40rpx;
+    font-size: 28rpx;
+    color: #666;
+    line-height: 40rpx;
+}
+
+.icon-close {
+    position: fixed;
+    z-index: 1000000;
+    top: 480rpx;
+    left: 50%;
+    margin-left: -40rpx;
+    width: 80rpx;
+    height: 80rpx;
+
+    image {
+        width: 90%;
+    }
+}

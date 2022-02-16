@@ -1,0 +1,75 @@
+<view class="container">
+    <view class="t0"></view>
+    <van-cell center use-label-slot wx:for="{{list0}}" wx:key="id">
+        <view slot="label" class="dashed">
+            <view class="box0">
+                <view class="red0"></view>
+                <view class="pubDate">{{item.date}}</view>
+            </view>
+            <view class="bbb">
+                <view class="box1" data-did="{{item}}" bindtap="navigator">
+                    <view class="title">{{item.title}}</view>
+                    <view class="summary">
+                        查看详细报道
+                        <text class="iconfont icon-zhankai" style="font-size:30rpx;"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </van-cell>
+    <view class="tt">
+        <view class="tipt">
+            <view class="iconfont ..icon-gerenfangyi" style="color:yellowgreen;font-size:46rpx"></view>
+            <view class="left">新冠肺炎知识科普</view>
+        </view>
+        <view slot="label" class="tips">
+            <view class="tip">
+                <view class="blue"></view>
+                {{list1.remark1}}
+            </view>
+            <view class="tip">
+                <view class="blue"></view>
+                {{list1.remark2}}
+            </view>
+            <view class="tip">
+                <view class="blue"></view>
+                {{list1.remark3}}
+            </view>
+            <view class="tip">
+                <view class="blue"></view>
+                {{list1.note1}}
+            </view>
+            <view class="tip">
+                <view class="blue"></view>
+                {{list1.note2}}
+            </view>
+        </view>
+    </view>
+    <view class="tt">
+        <view class="middle">
+            <view class="iconfont .icon-fengxiandiqu" style="color:orange;font-size:46rpx;vertical-align:middle;"></view>
+            <view class="left">中风险地区:</view>
+        </view>
+        <view class="midback">
+            <view class="area" wx:for="{{list2.mid}}" wx:key="*this" wx:if="{{show? index<3:index>=0}}">
+                <view class="orange"></view>
+                {{item}}
+                <view bindtap="click2" wx:if="{{index==list2.mid.length-1}}" class="iconfont .icon-shouye-zhankai-guanbi" style="color:grey; font-size:36rpx;text-align:right"></view>
+            </view>
+            <view bindtap="click1" wx:if="{{show}}" class="iconfont ..icon-zhankai2" style="font-size:36rpx;text-align:right;color:grey;"></view>
+        </view>
+    </view>
+    <view class="tt">
+        <view class="high">
+            <view class="iconfont .icon-fengxiandiqu" style="color:#e10000;font-size:46rpx"></view>
+            <view class="left">高风险地区:</view>
+        </view>
+        <view class="highback">
+            <view class="area" wx:for="{{list2.high}}" wx:key="*this">
+                <view class="red"></view>
+                {{item}}
+            </view>
+        </view>
+    </view>
+</view>
+<van-toast id="van-toast" />

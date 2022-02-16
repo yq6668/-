@@ -1,0 +1,105 @@
+<view class="top">
+    <view class="img" style="background-image:url({{img}});"></view>
+    <view class="bindu"></view>
+    <view class="country">
+        <text class="text1">{{data.name}}</text>
+        <text class="text2">最新疫情</text>
+    </view>
+    <navigator class="return" url="../../pages/global/global" open-type="navigateBack">
+        <view class="" hover-class="none" hover-stop-propagation="false">返回全球疫情</view>
+    </navigator>
+</view>
+<view class="condition">
+    <view class="yiqing">
+        <view class="view-a">
+            <view class="view-1">
+                <text class="">累计确诊</text>
+            </view>
+            <view class="view-2">{{data.conNum}}</view>
+            <view class="view-3">
+                <text class="">较昨日</text>
+                <text class="add">+{{data.conadd}}</text>
+            </view>
+        </view>
+        <view class="view-b">
+            <view class="view-1">
+                <text class="">累计死亡</text>
+            </view>
+            <view class="view-2">{{data.deathNum}}</view>
+            <view class="view-3">
+                <text class="">较昨日</text>
+                <text class="add">+{{data.deathadd}}</text>
+            </view>
+        </view>
+        <view class="view-c">
+            <view class="view-1">
+                <text class="">累计治愈</text>
+            </view>
+            <view class="view-2">{{data.cureNum}}</view>
+            <view class="view-3">
+                <text class="">较昨日</text>
+                <text class="add">+{{data.cureadd}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="time">
+        <text class="">截至{{time}}</text>
+         <text class="shuju fa fa-question-circle-o" bind:tap="showData2">数据说明</text>
+    </view>
+</view>
+
+
+<view class="container" >
+	<ec-canvas   id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+
+
+
+<view class="pppp">
+     <view class="global-sort"  wx:if="{{city!=''}}">
+        <view class="nav"  style="{{sty}}">
+            <view class="diqu">地区</view>
+            <view class="leiji">确诊</view>
+            <view class="siwang">死亡</view>
+            <view class="zhiyu">治愈</view>
+        </view>
+        <scroll-view class="scroll-view" scroll-y="true">
+        
+            <view class="sort" wx:for="{{city}}" wx:for-item="item" wx:key="name">
+                    <view class="nav-a">{{item.name}}</view>
+                    <view class="nav-b">{{item.conNum}}</view>
+                    <view class="nav-c">{{item.deathNum}}</view>
+                    <view class="nav-d">{{item.cureNum}}</view>
+            </view>
+        </scroll-view>
+</view>
+</view>
+  
+
+
+
+
+<van-popup  round show="{{ show2 }}" position="center" close-on-click-overlay="{{false}}" custom-style="height:60%; width:80%; position: fixed; top:40%" overlay-style="" bind:close="onClose2">
+    <view class="show2">
+        <view class="say">
+            <i class="fa fa-thermometer-4"></i>
+            疫情数据说明
+        </view>
+          
+        <view class="view">
+            <view class="">1.数据来源：</view>
+            <view class="">海外疫情数据均来自各国家和地区官方通报及媒体公开报道。</view>
+        </view>
+         <view class="view">
+            <view class="">2.数据更新时间：</view>
+            <view class="">数据实时更新，因计算、核实需要，与官方发布时间相比，将存在一定延迟。</view>
+        </view>
+         <view class="view">
+            <view class="">3.说明：</view>
+            <view class="">因"钻石公主号"邮轮内人员来自世界多国，故在邮轮上确诊的病例数据计入日本，离开邮轮后确诊的病例数据则分别计入其所在国。若出现其他特殊情况，将以各国家和地区官方通报的统计口径为准。</view>
+        </view>
+    </view>
+</van-popup>
+<view class="icon-close">
+    <image wx:if="{{show2}}" src="https://static.ws.126.net/163/f2e/news/virus_report/static/images/close_big.8c2d449.png" lazy-load="false" mode=widthFix" bindtap="ClosePopup" />
+</view>

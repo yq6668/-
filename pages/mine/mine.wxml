@@ -1,0 +1,27 @@
+<view class="container">
+    <view class="userinfo">
+        <block wx:if="{{!hasUserInfo}}">
+            <view wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">
+                <view class="login">
+                    <image src="../../inco/avatar.png" />
+                </view>
+                <view class="login2">点击头像登录</view>
+            </view>
+            <view wx:else>请使用1.4.4及以上版本基础库</view>
+        </block>
+        <block wx:else>
+            <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+    </view>
+    <van-cell-group class="cellgroup" inset wx:if="{{hasUserInfo}}">
+        <van-cell title="意见反馈" bindtap="showPopup" />
+        <van-cell title="退出登录" bindtap="outlogin" />
+    </van-cell-group>
+    <van-popup show="{{ show }}" bind:close="onClose" closeable round>
+        <text class="text">
+        如果有任何意见和问题都可以反馈到
+        邮箱地址：3190911650@qq.com
+        </text>
+    </van-popup>
+</view>

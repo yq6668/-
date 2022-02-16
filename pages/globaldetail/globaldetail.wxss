@@ -1,0 +1,231 @@
+.top {
+  position: relative;
+}
+.top .img {
+  width: 100%;
+  height: 442rpx;
+  background-size: 100% 100%;
+}
+.top .bindu {
+  position: absolute;
+  top: 100rpx;
+  left: 40rpx;
+  width: 344rpx;
+  height: 44rpx;
+  background-image: url("https://mat1.gtimg.com/news/images/inews/2020/feiyan/area/area_h3_bg.png");
+  background-size: 100% 100%;
+}
+.top .country {
+  position: absolute;
+  top: 150rpx;
+  left: 40rpx;
+  font-size: 50rpx;
+  color: #fff;
+}
+.top .country > text {
+  display: inline-block;
+}
+.top .country .text1 {
+  background-color: #5f5ff7;
+  padding: 8rpx;
+  border-radius: 8rpx;
+  margin-right: 10rpx;
+}
+.top .return {
+  position: absolute;
+  display: inline-block;
+  top: 30rpx;
+  right: 30rpx;
+  padding-left: 48rpx;
+  width: 176rpx;
+  height: 50rpx;
+  font-size: 26rpx;
+  color: #fff;
+  line-height: 46rpx;
+  border: 2rpx solid hsla(0, 0%, 100%, 0.6);
+  border-radius: 25rpx;
+  background: rgba(12, 12, 12, 0.6) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAAaVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8G612AAAAInRSTlMAKZh+CnT68tOlFu7euLOonZB4bGlaRxMG6sKUYlNLMSQPqxbhZAAAAIdJREFUGNNlj1kOwjAMRJOULN1LW0rZYe5/SOQaasl5P548RdbYEFM6G8UDqJSa0RyUuiMZxQn1UlnmvwGI2InFSs4hzr5gXI3Li2QJL5s8woflIPKJ6zaPaKXMALvNFnKHxciBv3FEv2dxZeYsfOZ6vPNTO61GhJXT4oib6wIStePSP5qJnl/bZglXtk5xhwAAAABJRU5ErkJggg==") no-repeat 14rpx 12rpx;
+  background-size: 24rpx 24rpx;
+}
+.condition {
+  position: absolute;
+  top: 280rpx;
+  width: 688rpx;
+  height: 240rpx;
+  margin: 0 31rpx;
+  padding: 52rpx 0 0 0;
+  background-color: #fff;
+  border-radius: 20rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.3);
+}
+.condition .yiqing {
+  display: flex;
+}
+.condition .yiqing > view {
+  flex: 1;
+  text-align: center;
+}
+.condition .yiqing > view .view-1 text {
+  font-size: 26rpx;
+  color: #333;
+}
+.condition .yiqing > view .view-2 {
+  font: 700 40rpx/80rpx DIN Alternate, din_alternate_bold;
+}
+.condition .yiqing > view .view-3 {
+  font-size: 26rpx;
+  color: #999;
+}
+.condition .yiqing .view-a .view-2 {
+  color: #a31d13;
+}
+.condition .yiqing .view-a .view-3 .add {
+  color: #a31d13;
+}
+.condition .yiqing .view-b .view-2 {
+  color: #333;
+}
+.condition .yiqing .view-b .view-3 .add {
+  color: #333;
+}
+.condition .yiqing .view-c .view-2 {
+  color: #31ac76;
+}
+.condition .yiqing .view-c .view-3 .add {
+  color: #31ac76;
+}
+.condition .time {
+  position: relative;
+  padding: 30rpx 50rpx 0 50rpx;
+  font-size: 28rpx;
+  color: #A9A9A9;
+}
+.condition .time .shuju {
+  position: absolute;
+  right: 52rpx;
+  top: 36rpx;
+}
+.pppp {
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 30rpx;
+}
+.pppp .global-sort {
+  clear: both;
+  margin-top: 60rpx;
+  background-color: #fff;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.3);
+  border-radius: 20rpx;
+}
+.pppp .global-sort .nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+}
+.pppp .global-sort .nav > view {
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+  background-color: #ebebeb;
+}
+.pppp .global-sort .nav .diqu {
+  flex: 14;
+  color: #222222;
+  background-color: #ebebeb;
+}
+.pppp .global-sort .nav .leiji {
+  flex: 9;
+  background-color: #ffefe6;
+  color: #f55253;
+}
+.pppp .global-sort .nav .siwang {
+  flex: 8;
+  background-color: #e9e3e3;
+}
+.pppp .global-sort .nav .zhiyu {
+  flex: 9;
+  background-color: #cee8dd;
+  color: #178B50;
+}
+.pppp .global-sort .scroll-view .sort {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30rpx;
+}
+.pppp .global-sort .scroll-view .sort > view {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2rpx solid #d8d8dd;
+}
+.pppp .global-sort .scroll-view .sort .nav-a {
+  flex: 14;
+  text-align: center;
+  font-size: 26rpx;
+}
+.pppp .global-sort .scroll-view .sort .nav-b {
+  flex: 9;
+}
+.pppp .global-sort .scroll-view .sort .nav-c {
+  flex: 8;
+}
+.pppp .global-sort .scroll-view .sort .nav-d {
+  flex: 9;
+}
+.container {
+  clear: both;
+  box-sizing: border-box;
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 240rpx;
+  background-color: #fff;
+  height: 700rpx;
+  line-height: 700rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.3);
+  border-radius: 20rpx;
+  /*  ！！注意：这里也一定要设置个百分比宽高，不然图表在页面上不显示 */
+}
+.container ec-canvas {
+  padding-top: 100rpx;
+  width: 100%;
+  height: 90%;
+}
+.show2 {
+  padding: 60rpx 40rpx 40rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+  z-index: 9999999999;
+}
+.show2 > .view {
+  padding-top: 30rpx;
+}
+.show2 .say {
+  font-size: 34rpx;
+  text-align: center;
+  color: #333;
+  font-weight: 700;
+}
+.show2 .say i {
+  color: #e10000;
+}
+.icon-close {
+  position: fixed;
+  z-index: 9999999999;
+  top: 75%;
+  left: 50%;
+  margin-left: -40rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.icon-close image {
+  width: 90%;
+}

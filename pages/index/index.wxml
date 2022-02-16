@@ -1,0 +1,89 @@
+<view class="image">
+  <image class="banner" width="100%" src="https://wen992.github.io/chinamap/img/banner.jpg" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+  <view class="img-tit">
+      <text class="tit-1">新型冠状病毒肺炎
+      中国 实时疫情</text>
+      <text class="tit-2">
+      数据来源:国家及各地卫健委每日信息发布</text>
+  </view>
+</view>
+<!-- 疫情总览 -->
+<view class="overview">
+  <view class="container">
+    <view class="lastupdatatime">
+      <text class="time-text">最新更新时间为:</text>
+      <text class="time">{{lastupdatatime}}</text>
+    </view>
+    <view class="yq-content">
+      <!-- 确诊病例 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.confirm}}</view>
+        <view class="content-num" style="color:#d66262">{{yqinfo.total.confirm}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:#d66262">+{{yqinfo.today.confirm}}</view>
+      </view>
+      <!-- 无症状 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.noSymptom}}</view>
+        <view class="content-num" style="color:#ae3ac6">{{yqinfo.extData.noSymptom}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:#ae3ac6">+{{yqinfo.extData.incrNoSymptom}}</view>
+      </view>
+      <!-- 治愈病例 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.heal}}</view>
+        <view class="content-num" style="color:#3dae76">{{yqinfo.total.heal}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:#3dae76">+{{yqinfo.today.heal}}</view>
+      </view>
+      <!-- 死亡病例 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.dead}}</view>
+        <view class="content-num" style="color:grey">{{yqinfo.total.dead}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:grey">+{{yqinfo.today.dead}}</view>
+      </view>
+      <!-- 现有确诊 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.extant}}</view>
+        <view class="content-num" style="color:red">{{extant}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:red">+{{yqinfo.today.storeConfirm}}</view>
+      </view>
+      <!-- 境外输入 -->
+      <view class="yqinfo">
+        <view class="content-tit">{{yqname.input}}</view>
+        <view class="content-num" style="color:#ffa352">{{yqinfo.total.input}}</view>
+        <view class="content-tips">较昨日</view>
+        <view class="add-num" style="color:#ffa352">+{{yqinfo.today.input}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 中国疫情地图 -->
+<view class="map">
+  <ec-canvas id="mychart-dom-area" canvas-id="mychart-area" ec="{{ec}}"></ec-canvas>
+</view>
+<!-- 全国各地疫情 -->
+<view class="table">
+  <text class="t-title">中国疫情 (含港澳台)</text>
+  <view class="t-name">
+    <text class="area">地区</text>
+    <text class="extant">现有</text>
+    <text class="total">累计</text>
+    <text class="dead">死亡</text>
+    <text class="heal">治愈</text>
+    <text class="detail">详情</text>
+  </view>
+  <view class="t-content" wx:for="{{chinainfo}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <text class="t-info">{{item.name}}</text>
+    <text class="t-info" style="color:red">{{item.value}}</text>
+    <view class="t-info-total">
+      <view class="total-mes">{{item.confirm}}</view>
+      <view class="total-add" style="color:#fc0" wx:if="{{item.add}}">较昨日+{{item.add}}</view>
+    </view>
+    <text class="t-info" style="color:grey">{{item.dead}}</text>
+    <text class="t-info">{{item.heal}}</text>
+    <navigator class="t-info-detail" url="../province/province?name={{item.name}}" style="font-size: 20px;"><text >></text></navigator>
+  </view>
+</view>

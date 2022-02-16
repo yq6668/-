@@ -1,0 +1,129 @@
+<view class="container">
+    <view class="globl-top">
+        <view class="view1">
+            <text class="i fa fa-globe"></text>
+            <text class="text">全球疫情</text>
+            <image class="" src="https://n.sinaimg.cn/finance/cece9e13/20200321/0320_intro_icon02.png?a=1" mode=widthFix" lazy-load="false" bind:tap="showData2" />
+        </view>
+        <view class="view2">
+            <text class="" decode="{{true}}">统计截至&nbsp;{{cachetime}}</text>
+        </view>
+    </view>
+    <view class="globl-condition">
+        <view class="view-a">
+            <view class="view1">
+                <text class="text1">累计确诊</text>
+            </view>
+            <view class="view2">
+                <text class="text2">{{othertotal.certain}}</text>
+            </view>
+            <view class="view3">
+                <text class="text3">较昨日</text>
+                <text class="text4">{{othertotal.certain_inc}}</text>
+            </view>
+        </view>
+        <view class="view-b">
+            <view class="view1">
+                <text class="text1">现有确诊</text>
+                <text class="text2 fa fa-question-circle-o" bind:tap="showMessage"></text>
+            </view>
+            <view class="view2">
+                <text class="text2">{{othertotal.ecertain}}</text>
+            </view>
+            <view class="view3">
+                <text class="text3">较昨日</text>
+                <text class="text4">{{othertotal.ecertain_inc}}</text>
+            </view>
+        </view>
+        <view class="view-c">
+            <view class="view1">
+                <text class="text1">累计治愈</text>
+            </view>
+            <view class="view2">
+                <text class="text2">{{othertotal.recure}}</text>
+            </view>
+            <view class="view3">
+                <text class="text3">较昨日</text>
+                <text class="text4">{{othertotal.recure_inc}}</text>
+            </view>
+        </view>
+        <view class="view-d">
+            <view class="view1">
+                <text class="text1">累计死亡</text>
+            </view>
+            <view class="view2">
+                <text class="text2">{{othertotal.die}}</text>
+            </view>
+            <view class="view3">
+                <text class="text3">较昨日</text>
+                <text class="text4">{{othertotal.die_inc}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="global-sort">
+        <view class="nav" style="position:{{posi}};padding-top:{{pad}};z-index:{{ind}};left:{{left}}">
+            <view class="nav-1">地区</view>
+            <view class="nav-2" bindtap="click">
+                <view class="xianyou">现有确诊</view>
+                <view class="font">
+                    <view class="font1 fa fa-sort-up" style="display:{{f1}}"></view>
+                    <view class="font2 fa fa-sort-down" style="display:{{f2}}"></view>
+                </view>
+
+            </view>
+            <view class="nav-3" bindtap="click2">
+                <view class="leiji">累计确诊</view>
+                <view class="font">
+                    <view class="font1 fa fa-sort-up" style="display:{{f3}}"></view>
+                    <view class="font2 fa fa-sort-down" style="display:{{f4}}"></view>
+                </view>
+            </view>
+            <view class="nav-4" bindtap="click3">
+                <view>死亡</view>
+                <view class="font">
+                    <view class="font1 fa fa-sort-up" style="display:{{f5}}"></view>
+                    <view class="font2 fa fa-sort-down" style="display:{{f6}}"></view>
+                </view>
+            </view>
+            <view class="nav-5" bindtap="click4">
+                <view class="zhiyu">治愈</view>
+                <view class="font">
+                    <view class="font1 fa fa-sort-up" style="display:{{f7}}"></view>
+                    <view class="font2 fa fa-sort-down" style="display:{{f8}}"></view>
+                </view>
+            </view>
+        </view>
+        <scroll-view class="scroll-view" scroll-y="true">
+            <view class="sort" wx:for="{{otherlist}}" wx:for-item="item" data-did="{{item}}" data-time="{{cachetime}}" wx:key="name" bindtap="navigateTo">
+                    <view class="nav-a">{{item.name}}</view>
+                    <view class="nav-b">{{item.econNum}}</view>
+                    <view class="nav-c">{{item.conNum}}</view>
+                    <view class="nav-d">{{item.deathNum}}</view>
+                    <view class="nav-e">{{item.cureNum}}</view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<!-- 自定义图标 -->
+<van-popup round show="{{ show }}" closeable close-icon="close" close-icon-position="top-right" position="center" custom-style="height:50%; width:70% " overlay-style="" bind:close="onClose">
+    <view class="show-top">
+        <i class="fa fa-thermometer-three-quarters"></i>
+        疫情数据说明
+    </view>
+    <view class="show-body">
+        <view>1.数据含义：</view>
+        <view>”现有确诊数“为当前正在治疗中的确诊人数，此数值会随疫情数据的实时更新而发生变化。</view>
+        <view>2：计算方法：</view>
+        <view>现有确诊数=累计确诊数-累计死亡数-累计治愈数</view>
+    </view>
+</van-popup>
+
+<van-popup round show="{{ show2 }}" position="center" close-on-click-overlay="{{false}}" custom-style="height:24%; width:80%; position: fixed; top:280rpx" overlay-style="" bind:close="onClose2">
+    <view class="show2">“较昨日新增”数据依据从北京时间当日0点起相关权威机构新公布确诊数据，
+        因各国公布次数、时间不一，数据会即时变化调整，以当日最终数据为准。</view>
+</van-popup>
+<view class="icon-close">
+    <image wx:if="{{show2}}" src="https://static.ws.126.net/163/f2e/news/virus_report/static/images/close_big.8c2d449.png" lazy-load="false" mode=widthFix" bindtap="ClosePopup" />
+</view>
+
+<van-toast id="van-toast" />

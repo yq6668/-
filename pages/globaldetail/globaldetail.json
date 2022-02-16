@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-popup": "../../components/vant/popup/index",
+    "ec-canvas": "../../components/ec-canvas/ec-canvas"
+  }
+}

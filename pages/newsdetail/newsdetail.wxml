@@ -1,0 +1,10 @@
+<view class="container">
+    <view class="title">{{msg.title}}</view>
+    <view class="box">
+        <view class="infoSource">动态追踪</view>
+        <view class="pubDate">{{msg.date}}</view>
+    </view>
+    <view class="text">{{msg.summary}}</view>
+    <view class="sourceUrl0">信息来源:{{msg.infoSource}}</view>
+    <view class="sourceUrl">{{msg.sourceUrl}}</view>
+</view>

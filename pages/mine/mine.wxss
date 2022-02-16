@@ -1,0 +1,46 @@
+.container .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  height: 500rpx;
+  background-color: #17a8ed;
+}
+.container .userinfo .login {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  line-height: 60rpx;
+  margin: auto;
+}
+.container .userinfo .login image {
+  width: 100%;
+  height: 100%;
+}
+.container .userinfo .login2 {
+  font-size: 40rpx;
+  margin-top: 10rpx;
+}
+.container .userinfo .userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+}
+.container .userinfo .userinfo-nickname {
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: white;
+}
+.container .cellgroup {
+  margin-top: 20rpx;
+}
+.container .text {
+  display: inline-block;
+  width: 400rpx;
+  height: 300rpx;
+  font-size: 30rpx;
+  padding: 40rpx 30rpx;
+}

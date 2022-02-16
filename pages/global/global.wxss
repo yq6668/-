@@ -1,0 +1,321 @@
+text {
+  margin: 0;
+  padding: 0;
+}
+.container .globl-top {
+  width: 100%;
+  flex-direction: row;
+  padding: 20rpx 40rpx;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.container .globl-top .view1 {
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.container .globl-top .view1 .i {
+  font-size: 60rpx;
+  color: royalblue;
+}
+.container .globl-top .view1 .text {
+  height: 100%;
+  font-size: 60rpx;
+  padding-left: 20rpx;
+  padding-right: 14rpx;
+}
+.container .globl-top .view1 image {
+  width: 100rpx;
+}
+.container .globl-top .view2 {
+  padding-left: 40rpx;
+}
+.container .globl-top .view2 text {
+  font-size: 40rpx;
+  color: silver;
+}
+.container .globl-condition {
+  padding: 10rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+.container .globl-condition > view {
+  flex-direction: column;
+  flex: 1;
+  padding: 20rpx 0;
+  height: 160rpx;
+  margin: 3rpx;
+  background-color: khaki;
+}
+.container .globl-condition > view > view {
+  text-align: center;
+}
+.container .globl-condition > view .view1 {
+  padding-top: 10rpx;
+  font-size: 30rpx;
+}
+.container .globl-condition > view .view2 {
+  padding-top: 20rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.container .globl-condition > view .view3 {
+  padding-top: 20rpx;
+  color: #7c7c7c;
+  font-size: 20rpx;
+}
+.container .globl-condition .view-a {
+  background-color: #fff4f4;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+}
+.container .globl-condition .view-a .view2 {
+  color: #be2121;
+}
+.container .globl-condition .view-a .view3 .text4 {
+  color: #be2121;
+}
+.container .globl-condition .view-b {
+  background-color: #fff8f8;
+}
+.container .globl-condition .view-b .view1 .text1 {
+  display: inline-block;
+  padding-right: 6rpx;
+}
+.container .globl-condition .view-b .view1 .text2 {
+  color: #8d8c8c;
+}
+.container .globl-condition .view-b .view2 {
+  color: #e61c1d;
+}
+.container .globl-condition .view-b .view3 .text4 {
+  color: #e61c1d;
+}
+.container .globl-condition .view-c {
+  background-color: #f1f8f4;
+}
+.container .globl-condition .view-c .view2 {
+  color: #178b50;
+}
+.container .globl-condition .view-c .view3 .text4 {
+  color: #178b50;
+}
+.container .globl-condition .view-d {
+  background-color: #f3f6f8;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+.container .globl-condition .view-d .view2 {
+  color: #4e5a65;
+}
+.container .globl-condition .view-d .view3 .text4 {
+  color: #4e5a65;
+}
+.container .global-sort {
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.2);
+  border-radius: 20rpx;
+  background-color: #fff;
+  margin: 0 1%;
+}
+.container .global-sort .nav {
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+}
+.container .global-sort .nav > view {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #333;
+  font-size: 28rpx;
+  background-color: #ebebeb;
+}
+.container .global-sort .nav .nav-1 {
+  flex: 12;
+  color: #222222;
+  background-color: #ebebeb;
+}
+.container .global-sort .nav .nav-2 {
+  flex: 12;
+  background-color: #fee7e7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .global-sort .nav .nav-2 .xianyou {
+  color: #ee6eae;
+}
+.container .global-sort .nav .nav-2 .font {
+  height: 100%;
+  position: relative;
+  width: 16rpx;
+  color: #9e9d9d;
+  font-size: 22rpx;
+}
+.container .global-sort .nav .nav-2 .font .font1 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 28rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-2 .font .font2 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 30rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-3 {
+  flex: 12;
+  background-color: #ffefe6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .global-sort .nav .nav-3 .leiji {
+  color: #f55253;
+}
+.container .global-sort .nav .nav-3 .font {
+  height: 100%;
+  position: relative;
+  width: 16rpx;
+  color: #9e9d9d;
+  font-size: 22rpx;
+}
+.container .global-sort .nav .nav-3 .font .font1 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 28rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-3 .font .font2 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 30rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-4 {
+  flex: 9;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .global-sort .nav .nav-4 .font {
+  height: 100%;
+  position: relative;
+  width: 16rpx;
+  color: #9e9d9d;
+  font-size: 22rpx;
+}
+.container .global-sort .nav .nav-4 .font .font1 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 28rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-4 .font .font2 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 30rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-5 {
+  flex: 13;
+  background-color: #cee8dd;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.container .global-sort .nav .nav-5 .zhiyu {
+  color: #178B50;
+}
+.container .global-sort .nav .nav-5 .font {
+  height: 100%;
+  position: relative;
+  width: 16rpx;
+  color: #9e9d9d;
+  font-size: 22rpx;
+}
+.container .global-sort .nav .nav-5 .font .font1 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 28rpx;
+  left: 0;
+}
+.container .global-sort .nav .nav-5 .font .font2 {
+  position: absolute;
+  padding-left: 4rpx;
+  top: 30rpx;
+  left: 0;
+}
+.container .global-sort .sort {
+  display: flex;
+  flex-direction: row;
+  padding: 0 30rpx;
+}
+.container .global-sort .sort > view {
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 6rpx;
+  color: #333;
+  font-size: 26rpx;
+  font-weight: 700;
+  text-align: right;
+  border-bottom: 1px solid #d8d8dd;
+}
+.container .global-sort .sort .nav-a {
+  flex: 12;
+  text-align: center;
+  font-size: 30rpx;
+}
+.container .global-sort .sort .nav-b {
+  flex: 12;
+  color: #cf2b1e;
+}
+.container .global-sort .sort .nav-c {
+  flex: 12;
+}
+.container .global-sort .sort .nav-d {
+  flex: 9;
+}
+.container .global-sort .sort .nav-e {
+  flex: 13;
+}
+.show-top {
+  padding: 30rpx 0;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333;
+}
+.show-top i {
+  color: #e10000;
+}
+.show-body {
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.show-body > view {
+  margin-bottom: 20rpx;
+}
+.show2 {
+  padding: 60rpx 40rpx 40rpx 40rpx;
+  font-size: 28rpx;
+  color: #666;
+  line-height: 40rpx;
+}
+.icon-close {
+  position: fixed;
+  z-index: 1000000;
+  top: 480rpx;
+  left: 50%;
+  margin-left: -40rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+.icon-close image {
+  width: 90%;
+}

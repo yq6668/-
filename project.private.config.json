@@ -1,0 +1,41 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [{
+                    "name": "pages/global/global",
+                    "pathName": "pages/global/global",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/globaldetail/globaldetail",
+                    "pathName": "pages/globaldetail/globaldetail",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/province/province",
+                    "pathName": "pages/province/province",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/newsdetail/newsdetail",
+                    "pathName": "pages/newsdetail/newsdetail",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

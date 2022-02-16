@@ -1,0 +1,169 @@
+.image {
+    position: relative;
+    margin-bottom: -8px;
+    z-index: -1;
+    .banner {
+        width: 100%;
+        opacity: .8;
+    }
+    .img-tit{
+        position: absolute;
+        top: 68px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        .tit-1{
+            color: black;
+        }
+        .tit-2{
+            font-size: 14px;
+            color: black;
+        }
+    }
+}
+.overview {
+    padding: 0 10px;
+    .container {
+        background-color: white;
+        box-shadow: 0px 1rem 2rem 0px rgb(48 55 66 / 15%);
+        transform: translate(0, -5 px);
+
+        .lastupdatatime {
+            font-size: 14px;
+            margin-bottom: 10px;
+
+            .time-text {
+                font-size: 16px;
+                color: rgb(117, 109, 109);
+            }
+        }
+    }
+}
+
+.yq-content {
+    .yqinfo {
+        display: inline-block;
+        width: 25%;
+        text-align: center;
+        font-size: 14px;
+        border: solid 1px #f3f3f3;
+        box-sizing: border-box;
+
+        .content-tit {
+            font-weight: 600;
+            margin: 5px 0;
+        }
+
+        .content-num {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .content-tips {
+            display: inline-block;
+        }
+
+        .add-num {
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+
+    #mychart-dom-area {
+        width: 100%;
+    }
+}
+.table {
+    .t-title {
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .t-name {
+        font-size: 14px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+
+        .area {
+            background-color: #ede7e7;
+            display: inline-block;
+            width: 20%;
+            color: black;
+        }
+
+        .extant {
+            background-color: #fcf2e8;
+            display: inline-block;
+            width: 20%;
+            color: red;
+        }
+
+        .total {
+            background-color: #fdeeee;
+            display: inline-block;
+            width: 20%;
+            color: #d66262;
+        }
+
+        .dead {
+            background-color: #f3f6f8;
+            display: inline-block;
+            width: 20%;
+            color: grey;
+        }
+
+        .heal {
+            background-color: #e9f7ec;
+            display: inline-block;
+            width: 20%;
+            color: #3dae76;
+        }
+    }
+
+    .t-content {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        border-bottom: solid 1px grey;
+        line-height: 50px;
+        .t-infoname{
+            display: inline-block;
+            font-size: 12px;
+            width: 20%;
+        }
+        .t-info {
+            display: inline-block;
+            font-size: 16px;
+            width: 20%;
+        }
+
+        .t-info-total {
+            display: inline-block;
+            width: 20%;
+            position: relative;
+
+            .total-mes {
+                line-height: 7px;
+                height: fit-content;
+            }
+
+            .total-add {
+                position: absolute;
+                bottom: -36px;
+                left: 10px;
+                font-size: 12px;
+                font-weight: 400;
+                color:#dc0f00;
+            }
+
+        }
+    }
+}
